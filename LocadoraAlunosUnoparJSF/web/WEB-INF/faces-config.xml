@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                        http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+
+<navigation-rule>
+    <from-view-id>/locarVeiculo.xhtml</from-view-id>
+    <navigation-case>
+      <from-action>#{pedido.locarOk()}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/locacaoOk.xhtml</to-view-id>
+    </navigation-case>
+    <navigation-case> 
+      <from-action>#{pedido.locarOk()}</from-action>
+      <from-outcome>erro</from-outcome>
+      <to-view-id>/locacaoErro.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+  <navigation-rule>
+    <from-view-id>/index.xhtml</from-view-id>
+    <navigation-case>
+      <from-action>#{veiculo.buscarOk()}</from-action>
+      <from-outcome>sucesso</from-outcome>
+      <to-view-id>/consultaOk.xhtml</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-action>#{veiculo.buscarOk()}</from-action>
+      <from-outcome>erro</from-outcome>
+      <to-view-id>/consultaErro.xhtml</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+</faces-config>

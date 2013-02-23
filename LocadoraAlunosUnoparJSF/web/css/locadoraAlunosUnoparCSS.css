@@ -1,0 +1,88 @@
+/* 
+    Document   : locadoraAlunosUnoparCSS
+    Created on : 23/02/2013, 12:05:43
+    Author     : murilo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    
+    font-family: Trebuchet MS, Arial !important;
+    font-size: 10pt !important;
+    
+}
+
+a{ 
+    text-decoration: none;
+    color: #666;
+    font-size: 12pt !important;
+  
+}
+
+a:hover,  a:active{
+   text-decoration: underline;
+}
+
+#labelTitle{
+    text-decoration: none;
+    color: #4175a4;
+    font-size: 12pt !important;
+    margin-bottom: -13pt;
+}
+
+#label{
+    text-decoration: none;
+    color: black;
+    font-size: 10pt !important;
+
+}
+
+#main{
+    width: 900px;
+    margin: 0 auto;
+}
+
+#top {
+    height: 150px;
+    text-align: center;
+    
+    color: #4175a4;
+    font-size: 18pt !important;
+}
+
+#menu {
+    height: 600px;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+#menuItem{
+    margin-top: 24px;
+height: 100%;
+overflow: hidden;
+    
+}
+
+#areaContent {
+    text-align: center;
+    color: #ffffff;
+    height: 600px;
+    width: 700px;
+    float: right;
+}
+
+#content{
+    
+    margin-left: 20pt;
+    margin-top: 10pt;
+    margin-right: 10pt;
+    text-align: left;
+    
+}
