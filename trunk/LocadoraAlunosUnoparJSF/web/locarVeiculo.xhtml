@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link type="text/css" rel="stylesheet" href="/css/locadoraAlunosUnoparCSS.css"></link>
+        <title>Locadora Alunos UNOPAR</title>
+    </h:head>
+    <h:body>    
+        <f:view>
+            <h:form>                
+                <p></p>
+                <font size="2" style="verdana">
+                </font>
+                <div id="main">
+                    <div id="top"><br></br><br></br>Locadora de Veículos Alunos UNOPAR</div>
+                    <div id="menu">
+                        <div id="menuItem">
+                            <h:outputLink value="/faces/index.xhtml">
+                                <f:verbatim>Consultar Veiculo</f:verbatim>
+                            </h:outputLink>
+                            <br></br>
+                            <h:outputLink value="../cadastroVeiculo.html">
+                                <f:verbatim>Cadastrar Veiculo</f:verbatim>
+                            </h:outputLink>
+                            <br></br>
+                            <div id="labelTitle">Locar Veiculo</div>
+                            <br></br>
+                            <h:outputLink value="/faces/devolverVeiculo.xhtml">
+                                <f:verbatim>Devolver Veiculo</f:verbatim>
+                            </h:outputLink> 
+                        </div>
+                    </div>
+                    <div id="areaContent">
+                        <div id="content">
+                            <div id="labelTitle">Locar Veiculo</div>
+
+                            <br></br><br></br>
+                            <table>
+                                <tr>
+                                    <td><div id="label">Codigo Pedido:</div></td>
+                                    <td>
+                                        <h:inputText value="#{pedido.locacao.codLocacao}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div id="label">Codigo Veiculo</div> </td>
+                                    <td>
+                                        <h:inputText value="#{pedido.locacao.codVeiculo}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div id="label">Data</div> </td>
+                                    <td>
+                                        <h:inputText value="#{pedido.locacao.data}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div id="label">Cliente</div> </td>
+                                    <td>
+                                        <h:inputText value="#{pedido.locacao.cliente}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div id="label">Valor Locação</div> </td>
+                                    <td>
+                                        <h:inputText value="#{pedido.locacao.valor}"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>
+                                <h:commandButton value="Locar" action="#{pedido.locarOk()}"/>
+                            </p>   
+                        </div> 
+                    </div>
+                </div>
+
+
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
+
+
+
+
+
+
+
